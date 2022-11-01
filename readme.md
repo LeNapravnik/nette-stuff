@@ -2,7 +2,7 @@ About ftp-test
 --------------
 
 App gets FTP credentials from `config/local.neon` file - add host, login and password into `config/local.neon` parameters - ftp. App shows list
-of files and folders of ftp directory, click folder to see list of files and folders, click file to download it.
+of files and folders of ftp directory, click folder to see list of files and folders, click file to download it into new folder user_ftp_data.
 
 
 User Authentication (Nette example)

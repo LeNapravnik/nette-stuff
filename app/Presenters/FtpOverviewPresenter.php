@@ -13,7 +13,6 @@ use App\Model\FtpOverview;
  * @package App\Presenters
  */
 final class FtpOverviewPresenter extends Presenter {
-    /** @var FtpOverview @inject*/
     public $ftpOverview;
 
     /**
