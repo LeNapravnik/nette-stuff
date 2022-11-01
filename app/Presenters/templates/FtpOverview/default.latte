@@ -1,0 +1,26 @@
+{block content}
+
+<div id="menu">
+    <h3><a n:href="FtpOverview:default">Home</a></h3>
+</div>
+
+<div>
+    <h1 n:block=title>Adresář</h1>
+</div>
+
+<div id="content">
+        
+    <table n:snippet="filesContainer">
+    {foreach $files as $file}
+    {var $name = $file["name"]}
+        <tr>
+        {if $file["type"] === "dir"}
+            <td n:snippet="folder-{$name}"><a class:"ajax" n:href="openFolder! $name">- /{$file["name"]}</a></td>
+        {elseif $file["type"] === "file"}
+            <td n:snippet="file-{$name}"><a class:"ajax" n:href="downloadFile! $name, $prev_directory">- {$file["name"]}</td>
+        {/if}
+
+        </tr>
+        {/foreach}
+    </table>
+</div>
